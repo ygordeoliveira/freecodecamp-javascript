@@ -1,6 +1,5 @@
 function caseInSwitch(val) {
 // Only change code below this line
-
   switch (val) {
     case 1: 
       return "alpha";
