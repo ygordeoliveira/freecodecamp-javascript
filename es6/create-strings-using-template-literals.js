@@ -11,7 +11,7 @@ function makeList(arr) {
     failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
   }
   // Only change code above this line
-   return failureItems;
+  return failureItems;
 }
 
 const failuresList = makeList(result.failure);
