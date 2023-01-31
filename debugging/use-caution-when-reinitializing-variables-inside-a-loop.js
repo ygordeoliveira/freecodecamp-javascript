@@ -7,11 +7,11 @@ function zeroArray(m, n) {
     // Adds the m-th row into newArray
     row = [];
 
-  for (let j = 0; j < n; j++) {
-  // Pushes n zeroes into the current row to create the columns
-    row.push(0);
-  }
-  // Pushes the current row, which now has n zeroes in it, to the array
+    for (let j = 0; j < n; j++) {
+      // Pushes n zeroes into the current row to create the columns
+      row.push(0);
+    }
+    // Pushes the current row, which now has n zeroes in it, to the array
     newArray.push(row);
   }
   return newArray;
