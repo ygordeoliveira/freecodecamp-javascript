@@ -22,8 +22,8 @@ function isEveryoneHere(userObj) {
   let namesOfUsers = ["Alan", "Jeff", "Sarah", "Ryan"];
 
   for (let i = 0; i < namesOfUsers.length; i++) {
-    let names = namesOfUsers[i];
-    if (userObj.hasOwnProperty(names) === false) {
+    let name = namesOfUsers[i];
+    if (userObj.hasOwnProperty(name) === false) {
       return false;
     } 
   }
