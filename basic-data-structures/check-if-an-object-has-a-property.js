@@ -23,7 +23,7 @@ function isEveryoneHere(userObj) {
 
   for (let i = 0; i < namesOfUsers.length; i++) {
     let name = namesOfUsers[i];
-    if (userObj.hasOwnProperty(name) === false) {
+    if (!(name in userObj)) {
       return false;
     } 
   }
@@ -32,4 +32,3 @@ function isEveryoneHere(userObj) {
 // Only change code above this line
 
 isEveryoneHere(users);
-
