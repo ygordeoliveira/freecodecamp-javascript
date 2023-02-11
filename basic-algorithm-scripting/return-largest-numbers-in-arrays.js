@@ -2,7 +2,7 @@ function largestOfFour(arr) {
   let arrMax = [];
 
   for (let i = 0; i < arr.length; i++) {
-    let max = arr[i][0];
+    let max = -Infinity;
 
     for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] > max) {
