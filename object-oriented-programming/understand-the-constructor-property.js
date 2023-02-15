@@ -4,9 +4,5 @@ function Dog(name) {
 
 // Only change code below this line
 function joinDogFraternity(candidate) {
-  if (candidate.constructor === Dog) {
-    return true;
-  } else {
-    return false;
-  }
+  return candidate.constructor === Dog;
 }
