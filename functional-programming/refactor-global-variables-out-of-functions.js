@@ -3,17 +3,19 @@ const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Mo
 
 // Change code below this line
 function add(bookList, bookName) {
-  return [...bookList, bookName];
-// Change code above this line
+    return [...bookList, bookName];
 }
+// Change code above this line
+
 // Change code below this line
 function remove(bookList, bookName) {
-  const bookListCopy = [...bookList];
-  const bookNameIndex = bookList.indexOf(bookName);
-  if (bookNameIndex >= 0) {
-   bookListCopy.splice(bookNameIndex, 1);
-  }
-  return bookListCopy;
+    const bookListCopy = [...bookList];
+    const bookNameIndex = bookList.indexOf(bookName);
+
+        if (bookNameIndex >= 0) {
+            bookListCopy.splice(bookNameIndex, 1);
+        }
+        return bookListCopy;
 }
 // Change code above this line
 
