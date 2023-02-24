@@ -7,7 +7,7 @@ const squareList = arr => {
   const squaredIntegers = positiveIntegers.map(num => {
     return num ** 2;
   });
-  return squaredIntegers;
+   return squaredIntegers;
 };
 // Only change code above this line
 
