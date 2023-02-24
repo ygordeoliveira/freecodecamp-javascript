@@ -1,7 +1,7 @@
 function sentensify(str) {
 // Only change code below this line
-let modifiedStr = str.split(/\W/);
-  return modifiedStr.join(" ");
+  let words = str.split(/\W/);
+  return words.join(" ");
 // Only change code above this line
 }
 
