@@ -4,8 +4,8 @@ function add(x) {
         return function(z) {
             return x + y + z;
         } 
+    // Only change code above this line
     }
 }
-// Only change code above this line
 
 add(10)(20)(30);
