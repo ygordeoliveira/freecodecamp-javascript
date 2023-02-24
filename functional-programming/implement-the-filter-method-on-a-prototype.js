@@ -3,7 +3,7 @@ Array.prototype.myFilter = function(callback) {
     // Only change code below this line
     for (let i = 0; i < this.length; i++) {
         if (callback(this[i], i, this)) {
-        newArray.push(this[i]);
+            newArray.push(this[i]);
        }
     }
     return newArray;
