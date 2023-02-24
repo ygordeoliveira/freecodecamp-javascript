@@ -120,12 +120,11 @@ function getRating(watchList) {
     }
   });
 
-  let nolanMovieRatingSum = nolanMovies.reduce(function(total, movie,) {
+  let nolanMovieRatingSum = nolanMovies.reduce(function(total, movie) {
     total += parseFloat(movie.imdbRating);
     return total;
   }, 0);
 
- 
   let nolanMovieCount = nolanMovies.length;
 
   let averageRating = nolanMovieRatingSum / nolanMovieCount; 
