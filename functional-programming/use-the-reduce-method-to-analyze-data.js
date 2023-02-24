@@ -113,23 +113,24 @@ const watchList = [
 ];
 
 function getRating(watchList) {
-  // Only change code below this line
-  let nolanMovies = watchList.filter(function(movie) {
-    if (movie.Director === "Christopher Nolan") {
-      return movie;
-    }
-  });
+    // Only change code below this line
+    let nolanMovies = watchList.filter(function(movie) {
+        if (movie.Director === "Christopher Nolan") {
+            return movie;
+        }
+    });
 
-  let nolanMovieRatingSum = nolanMovies.reduce(function(total, movie) {
-    total += parseFloat(movie.imdbRating);
-    return total;
-  }, 0);
+    let nolanMovieRatingSum = nolanMovies.reduce(function(total, movie) {
+        total += parseFloat(movie.imdbRating);
+            return total;
+    }, 0);
 
-  let nolanMovieCount = nolanMovies.length;
+    let nolanMovieCount = nolanMovies.length;
 
-  let averageRating = nolanMovieRatingSum / nolanMovieCount; 
-  // Only change code above this line
-  return averageRating;
+    let averageRating = nolanMovieRatingSum / nolanMovieCount; 
+
+    return averageRating;
+    // Only change code above this line
 }
 
 getRating(watchList);
