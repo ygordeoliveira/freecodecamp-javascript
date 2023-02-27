@@ -9,13 +9,13 @@ function add(bookList, bookName) {
 
 // Change code below this line
 function remove(bookList, bookName) {
-    const bookListCopy = [...bookList];
-    const bookNameIndex = bookList.indexOf(bookName);
+   const bookListCopy = [...bookList];
+   const bookNameIndex = bookList.indexOf(bookName);
 
-        if (bookNameIndex >= 0) {
-            bookListCopy.splice(bookNameIndex, 1);
-        }
-        return bookListCopy;
+    if (bookNameIndex >= 0) {
+        bookListCopy.splice(bookNameIndex, 1);
+    }
+    return bookListCopy;
 }
 // Change code above this line
 
