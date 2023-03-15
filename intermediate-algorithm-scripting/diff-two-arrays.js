@@ -1,17 +1,20 @@
 function diffArray(arr1, arr2) {
-    const newArr = [];
+    const notMatchingItems = [];
+    const itemsFromTheFirstArr = arr1;
+    const itemsFromTheSecondArr = arr2;
+  
+    for (let i = 0; i < itemsFromTheFirstArr.length; i++) {
+        if (itemsFromTheSecondArr.indexOf(itemsFromTheFirstArr[i]) === -1) {
+            notMatchingItems.push(itemsFromTheFirstArr[i]);
+        }
+    }
 
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr2.indexOf(arr1[i]) === -1) {
-            newArr.push(arr1[i]);
+    for (let j = 0; j < itemsFromTheSecondArr.length; j++) {
+        if (itemsFromTheFirstArr.indexOf(itemsFromTheSecondArr[j]) === -1) {
+            notMatchingItems.push(itemsFromTheSecondArr[j]);
         }
     }
-    for (let j = 0; j < arr2.length; j++) {
-        if (arr1.indexOf(arr2[j]) === -1) {
-            newArr.push(arr2[j]);
-        }
-    }
-    return newArr;
+    return notMatchingItems;
 }
-
+                        
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
