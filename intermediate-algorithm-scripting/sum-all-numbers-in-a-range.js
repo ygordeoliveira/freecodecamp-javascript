@@ -1,13 +1,12 @@
 function sumAll(arr) {
-    let sum = 0; 
-    arr.sort((a, b) => a - b);
+    arr.sort(function(a,b) {return a - b})
+    const [initialNumber, finalNumber] = arr;
+    let sumOfNumbers = 0;
   
-    const [start, end] = arr;
-
-    for (let i = start; i <= end; i++) {
-        sum += i;
+    for (let i = initialNumber; i <= finalNumber; i++) {
+        sumOfNumbers += i; 
     }
-    return sum;
-}
-
-sumAll([1, 4]);
+    return sumOfNumbers;
+  }
+  
+  sumAll([1, 4]);
