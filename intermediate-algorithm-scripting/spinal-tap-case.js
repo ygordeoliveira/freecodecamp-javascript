@@ -1,5 +1,8 @@
 function spinalCase(str) {
-    return str.split(/\s|_|(?=[A-Z])/).join("-").toLowerCase();
-}
+    let words = str.split((/\s|_|(?=[A-Z])/));
+    let phrases = words.join("-");
+    let transformationOfSentencesToMinuscules = phrases.toLowerCase();
+    return transformationOfSentencesToMinuscules;
+  }
 
 spinalCase("thisIsSpinalTap");
