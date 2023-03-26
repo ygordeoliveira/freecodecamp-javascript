@@ -1,13 +1,21 @@
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
 function fearNotLetter(str) {
-    let firstLetterCode = str[0].charCodeAt();
-  
-    for (let i = 1; i < str.length; i++) {
-        let letterCode = firstLetterCode + i;
-      
-        if (letterCode != str[i].charCodeAt()) {
-            return String.fromCharCode(letterCode);
+    let previousIndex = alphabet.indexOf(str[0]);
+    let counter = 1;
+
+    while (counter < str.length) {
+        let currentIndex = alphabet.indexOf(str[counter]);
+    
+        let indexDifference = currentIndex - previousIndex;
+    
+        if (indexDifference === 1) {
+            previousIndex++;
+        } else if (indexDifference > 1) {
+            return alphabet[previousIndex + 1];
         }
-    }       
+        counter++;
+    }
 }
-  
+
 fearNotLetter("abce");
