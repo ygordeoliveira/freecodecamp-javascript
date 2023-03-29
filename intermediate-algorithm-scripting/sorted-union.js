@@ -1,10 +1,14 @@
 function uniteUnique(...arrOfNumbers) {
-    let numbersUnique = [];
+    let numbers = [];
  
     for (let arr of arrOfNumbers) {
-        numbersUnique.push(...arr);
+        for (let elements of arr) {
+            if (!numbers.includes(elements)) {
+                numbers.push(elements);
+            }
+        }
     }
-    return [...new Set(numbersUnique)];
+    return numbers;
 }
  
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
