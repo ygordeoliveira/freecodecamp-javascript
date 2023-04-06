@@ -1,21 +1,18 @@
-function sumPrimes(num) {
-    let numbersPrimes = [];
+function sumPrimes(superiorLimit) {
+    let sumOfPrimeNumbers = 0;
     
-    for (let numero = 2; numero <= num; numero++) {
-        if (verificationOfPrimeNumbers(numero)) {
-            numbersPrimes.push(numero);
+    for (let number = 2; number <= superiorLimit; number++) {
+        if (isPrime(number)) {
+            sumOfPrimeNumbers += number;
         }
     }
-    let sumOfNumbersPrimes = numbersPrimes.reduce((acumulador, valorAtual) => {
-        return acumulador + valorAtual;
-    });
-    return sumOfNumbersPrimes;
+    return sumOfPrimeNumbers;
 }
 
-function verificationOfPrimeNumbers(numero)  {
-    for (let divisor = 2; divisor < numero; divisor++) {
-        if (numero % divisor === 0) {
-             return false;
+function isPrime(number)  {
+    for (let factor = 2; factor < number; factor++) {
+        if (number % factor === 0) {
+            return false;
         } 
     }
     return true;
