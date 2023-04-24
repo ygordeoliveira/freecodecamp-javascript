@@ -12,15 +12,15 @@ function binaryToDecimalConversion(bin) {
 
 function binaryAgent(bin) {
     let bins = bin.split(" ");
-    let decimals = [];
+    let decimal;
+    let phrase = "";
     
-    for (let i = 0; i < bins.length; i++) {
-      decimals.push(binaryToDecimalConversion(bins[i]));
+    for (let bin of bins) {
+       decimal = binaryToDecimalConversion(bin);
+       phrase += String.fromCharCode(decimal);
     }
- 
-    let words = decimals.map(int => String.fromCharCode(int));
-    
-    return words.join("");
+    return phrase;
 }
- 
-binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111")
