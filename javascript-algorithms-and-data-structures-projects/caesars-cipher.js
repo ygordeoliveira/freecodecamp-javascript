@@ -1,14 +1,12 @@
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 function rot13(str) {
-    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+    let rotateFactor = 13;
     let strDecoded = "";
-
-    for (let i = 0; i < str.length; i++) {
-        if (alphabet.indexOf(str[i]) === -1) {
-            strDecoded += str[i];
-        } else {
-            strDecoded += alphabet.at(alphabet.indexOf(str[i]) - 13);
-        }
+    
+    for (let char of str) {
+        let charDecoded = ALPHABET.indexOf(char) === -1 ? char : ALPHABET.at(ALPHABET.indexOf(char) - rotateFactor);
+        strDecoded += charDecoded;
     }
     return strDecoded;
 }
